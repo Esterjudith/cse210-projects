@@ -31,7 +31,7 @@ class Program
         lonelyHeartsMovie.GetCommentCount();
         lonelyHeartsMovie.DisplayComments();
 
-         //comments for The Notebook movive 
+         //comments for The Notebook movie 
          Comment user6Comment = new Comment("Teresa", "Completely unexpected, great ending");   
          Comment user7Comment   = new Comment("Arnold", "Great movie to watch on a date");
          Comment user8Comment = new Comment("Caroline", "5 stars!");
