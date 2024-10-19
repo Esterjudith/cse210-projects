@@ -10,7 +10,7 @@ public class Comment
     }
    
     
-    public void DisplayComment ()
+    public void DisplayComment()
     {
         Console.WriteLine($"{_commentText} - ({_name})");
     } 

@@ -3,18 +3,22 @@ using System;
 class Program
 {
     static void Main(string[] args)
-    {  //Comments for back to the future movie
+    { 
+        //List to store video objects
+        List<Video> videoList = new List<Video>();  
+        
+        
+         //Comments for back to the future movie
         Comment user1Comment = new Comment("Angela", "Great Movie");        
         Comment user2Comment = new Comment("James", "Hated the movie");
         Comment user1Comment2 = new Comment("Angela", "forgot to say I would watch it again");
 
         Video backToTheFuture = new Video("backToTheFuture", "Lanny Smith", 120);
+        videoList.Add(backToTheFuture);
         backToTheFuture.AddComment(user1Comment);
         backToTheFuture.AddComment(user2Comment);
         backToTheFuture.AddComment(user1Comment2);
-        Console.WriteLine(backToTheFuture.GetTitle());
-        backToTheFuture.GetCommentCount();
-        backToTheFuture.DisplayComments();
+   
 
        //Comments for lonely hearts movie
        Comment user3Comment = new Comment("Terry", "What a great movie, cried a ton!");
@@ -24,12 +28,13 @@ class Program
         Video lonelyHeartsMovie = new Video();
         lonelyHeartsMovie.SetTitle("LonglyHearts");
         lonelyHeartsMovie.SetAuthor("Andrew Taylor");
+        lonelyHeartsMovie.SetLength(162);
+        videoList.Add(lonelyHeartsMovie);
         Console.WriteLine(lonelyHeartsMovie.GetTitle());
         lonelyHeartsMovie.AddComment(user3Comment);
         lonelyHeartsMovie.AddComment(user4Comment);
         lonelyHeartsMovie.AddComment(user5Comment);
-        lonelyHeartsMovie.GetCommentCount();
-        lonelyHeartsMovie.DisplayComments();
+        
 
          //comments for The Notebook movie 
          Comment user6Comment = new Comment("Teresa", "Completely unexpected, great ending");   
@@ -37,14 +42,18 @@ class Program
          Comment user8Comment = new Comment("Caroline", "5 stars!");
          
          Video theNotebookMovie = new Video("The Notebook", "John Smith", 160);
-         Console.WriteLine(theNotebookMovie.GetTitle());
+        
+         videoList.Add(theNotebookMovie);
          theNotebookMovie.AddComment(user6Comment);
          theNotebookMovie.AddComment(user7Comment);
          theNotebookMovie.AddComment(user8Comment);
-         theNotebookMovie.GetCommentCount();
-         theNotebookMovie.DisplayComments();
+       
       
-
+        foreach(Video video in videoList)
+        {
+            video.DisplayVideoDetails();
+            Console.WriteLine();
+        }
         
     }
 }

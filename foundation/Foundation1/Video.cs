@@ -55,13 +55,26 @@ public class Video
     {
         _comments.Add(comment);
     }
-    public void GetCommentCount()
+    public int GetCommentCount()
     {
-        Console.WriteLine($"Number of comments: {_comments.Count}");
+        return _comments.Count;
     }
     public void DisplayComments()
     {
         foreach(Comment comment in _comments)
+        {
+            comment.DisplayComment();
+        }
+    }
+
+    public void DisplayVideoDetails()
+    {
+        Console.WriteLine($"Title: {_title}");
+        Console.WriteLine($"Author: {_author}");
+        Console.WriteLine($"Duraton: {_length}");
+        Console.WriteLine($"Number of Comments:{GetCommentCount()}");
+        
+        foreach(Comment comment in _comments)   
         {
             comment.DisplayComment();
         }
