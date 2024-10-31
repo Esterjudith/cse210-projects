@@ -1,0 +1,3 @@
+0
+SimpleGoal:clean room,clean,50,False
+EternalGoal:walk,walk,10
