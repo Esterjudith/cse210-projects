@@ -1,3 +1,0 @@
-0
-SimpleGoal:Clean room,sweep floor,50
-EternalGoal:code,code every day,30
